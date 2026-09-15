@@ -2,6 +2,8 @@
 
 **Student Name:** Prince Yadav  
 **Student ID / Enrollment:** 150096725032  
+**Live Render API Deployment:** [https://assignment-13-realtime-chat-application-0k2f.onrender.com](https://assignment-13-realtime-chat-application-0k2f.onrender.com/)  
+**GitHub Repository:** [https://github.com/2025prince-control/assignment-13-realtime-chat-application](https://github.com/2025prince-control/assignment-13-realtime-chat-application)  
 **Track:** Backend & Real-Time Web | **Level:** Advanced | **Estimated Time:** 7–9 Hours  
 **Tech Stack:** Node.js, Express.js, Socket.io (4.x), In-Memory History Store, CORS  
 
