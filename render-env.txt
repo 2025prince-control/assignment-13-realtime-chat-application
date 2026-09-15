@@ -1,0 +1,46 @@
+================================================================================
+🚀 RENDER DEPLOYMENT SETTINGS & ENVIRONMENT VARIABLES GUIDE
+Student: Prince Yadav (150096725032)
+Assignment: 13 - Real-Time Group Chat & Messaging Engine (Socket.io)
+Repository: https://github.com/2025prince-control/assignment-13-realtime-chat-application
+================================================================================
+
+When creating a new Web Service on Render (https://dashboard.render.com/):
+
+--------------------------------------------------------------------------------
+1. BASIC SERVICE CONFIGURATION
+--------------------------------------------------------------------------------
+Name:             assignment-13-realtime-chat-application
+Repository:       2025prince-control/assignment-13-realtime-chat-application
+Branch:           main
+Runtime:          Node
+Region:           Singapore (or closest to you)
+Instance Type:    Free
+
+--------------------------------------------------------------------------------
+2. ROOT DIRECTORY & BUILD COMMANDS
+--------------------------------------------------------------------------------
+Root Directory:   prince yadav 150096725032
+Build Command:    npm install
+Start Command:    npm start
+                  (or: node server.js)
+
+--------------------------------------------------------------------------------
+3. ENVIRONMENT VARIABLES (Add under "Environment" section in Render)
+--------------------------------------------------------------------------------
+Key:              PORT
+Value:            10000
+
+Key:              NODE_ENV
+Value:            production
+
+--------------------------------------------------------------------------------
+4. VERIFICATION AFTER DEPLOYMENT
+--------------------------------------------------------------------------------
+Once deployed, Render will provide your live URL (e.g. https://xyz.onrender.com).
+You can test it immediately:
+- Base URL:       https://<your-render-subdomain>.onrender.com/
+- Health check:   https://<your-render-subdomain>.onrender.com/health
+- Rooms API:      https://<your-render-subdomain>.onrender.com/api/rooms
+- Online Users:   https://<your-render-subdomain>.onrender.com/api/users
+================================================================================

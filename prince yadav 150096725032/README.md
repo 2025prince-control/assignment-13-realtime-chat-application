@@ -146,7 +146,21 @@ The backend server listens on `PORT` (default `5000` or fallback `5050` on macOS
 
 ---
 
-## 🧪 7. Automated Testing Suite
+## 🌐 7. Deploying to Render
+
+1. Go to [dashboard.render.com](https://dashboard.render.com/) and create a **New Web Service**.
+2. Connect your GitHub repository: `2025prince-control/assignment-13-realtime-chat-application`.
+3. Configure the build parameters:
+   - **Root Directory:** `prince yadav 150096725032`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start` *(or `node server.js`)*
+4. Under **Environment Variables**, add:
+   - `PORT` = `10000`
+   - `NODE_ENV` = `production`
+
+---
+
+## 🧪 8. Automated Testing Suite
 
 Execute the standalone end-to-end test suite (run from within `prince yadav 150096725032`):
 ```bash
