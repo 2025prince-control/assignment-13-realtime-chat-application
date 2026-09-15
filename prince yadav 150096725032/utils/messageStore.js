@@ -97,7 +97,8 @@ function getUsersInRoom(room) {
       users.push({
         socketId: user.socketId,
         username: user.username,
-        avatar: user.avatar
+        avatar: user.avatar,
+        loginTime: user.loginTime
       });
     }
   }
@@ -128,7 +129,8 @@ function getAllUsers() {
     socketId: u.socketId,
     username: u.username,
     avatar: u.avatar,
-    currentRoom: u.currentRoom
+    currentRoom: u.currentRoom,
+    loginTime: u.loginTime
   }));
 }
 
@@ -158,7 +160,31 @@ function getRoomHistory(room) {
 }
 
 /**
- * List all available channels
+ * Clear history for a room
+ * @param {string} room 
+ */
+function clearRoomHistory(room) {
+  if (roomHistories[room]) {
+    roomHistories[room] = [];
+    return true;
+  }
+  return false;
+}
+
+/**
+ * List all available channels with stats
+ * @returns {Array<Object>}
+ */
+function getRoomsWithStats() {
+  return Object.keys(roomHistories).map(room => ({
+    room,
+    totalMessages: roomHistories[room].length,
+    activeUsersCount: getUsersInRoom(room).length
+  }));
+}
+
+/**
+ * List all available channel names
  * @returns {Array<string>}
  */
 function getAvailableRooms() {
@@ -192,6 +218,8 @@ module.exports = {
   getAllUsers,
   addMessageToHistory,
   getRoomHistory,
+  clearRoomHistory,
+  getRoomsWithStats,
   getAvailableRooms,
   createRoom
 };
