@@ -25,25 +25,24 @@ This project delivers a robust, high-throughput **Real-Time Group Chat & Direct 
 ## 🏗️ 2. Project Directory Structure
 
 ```text
-assignment-13-chat-socket/
-├── prince yadav 150096725032/
-│   ├── routes/
-│   │   ├── roomRoutes.js        # REST endpoints: rooms, messages & history
-│   │   └── userRoutes.js        # REST endpoints: active users & REST DMs
-│   ├── sockets/
-│   │   ├── chatHandler.js       # Socket.io chat:send, DM & typing handlers
-│   │   └── userHandler.js       # Socket.io user:login, room:join/leave, disconnect
-│   ├── utils/
-│   │   └── messageStore.js      # In-memory store (connectedUsers Map, 50-msg buffer)
-│   ├── server.js                # Express & Socket.io backend bootstrap
-│   ├── test-socket.js           # Automated multi-client Socket & API test suite
-│   ├── .env & .env.example      # Environment variables configuration
-│   ├── package.json             # Student subfolder package definition
-│   └── README.md                # Comprehensive documentation
-├── server.js                    # Root server bootstrap wrapper
-├── test-socket.js               # Root test runner
-├── package.json                 # Root scripts & dependencies
-└── README.md                    # Root project documentation
+assignment-13-realtime-chat-application/
+├── .gitignore
+├── README.md
+└── prince yadav 150096725032/
+    ├── routes/
+    │   ├── roomRoutes.js        # REST endpoints: channels, messages & history
+    │   └── userRoutes.js        # REST endpoints: active users & REST DMs
+    ├── sockets/
+    │   ├── chatHandler.js       # Socket.io chat:send, DM & debounced typing
+    │   └── userHandler.js       # Socket.io user:login, room:join/leave, disconnect
+    ├── utils/
+    │   └── messageStore.js      # In-memory store (connectedUsers Map, 50-msg buffer)
+    ├── server.js                # Express & Socket.io backend bootstrap
+    ├── test-socket.js           # Automated multi-client Socket & API test suite
+    ├── .env.example             # Environment variables configuration
+    ├── .gitignore               # Exclusions for node_modules, .env
+    ├── package.json             # Scripts & dependencies
+    └── README.md                # Subfolder documentation
 ```
 
 ---
@@ -130,7 +129,7 @@ function addMessageToHistory(room, messageObj) {
 ### Installation
 ```bash
 git clone https://github.com/2025prince-control/assignment-13-realtime-chat-application.git
-cd assignment-13-realtime-chat-application
+cd "assignment-13-realtime-chat-application/prince yadav 150096725032"
 npm install
 ```
 
@@ -149,7 +148,7 @@ The backend server listens on `PORT` (default `5000` or fallback `5050` on macOS
 
 ## 🧪 7. Automated Testing Suite
 
-Execute the standalone end-to-end test suite:
+Execute the standalone end-to-end test suite (run from within `prince yadav 150096725032`):
 ```bash
 npm test
 ```
